@@ -26,7 +26,7 @@ public sealed class Apartment : Entity
     public Money Price { get; private set; }
     public Money CleaningFee { get; private set; }
     
-    public DateTime? LastBookedOnUtc { get; private set; }
+    public DateTime? LastBookedOnUtc { get; internal set; }
     public List<Amenity> Amenities { get; private set; } = new();
 
     public static Apartment Create(Name name,

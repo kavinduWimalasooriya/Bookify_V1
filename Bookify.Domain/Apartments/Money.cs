@@ -30,4 +30,6 @@ public record Money(decimal Amount,Currency Currency)
     public static Money Zero() => new Money(0, Currency.Usd);
     
     public static Money Zero(Currency currency) => new(0, currency);
+
+    public bool IsZero() => this == Zero();
 }
